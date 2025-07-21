@@ -41,7 +41,7 @@ train_loader = DataLoader(
     dataset=train_ds,
     batch_size=2,
     shuffle=True,
-    num_workers=0
+    num_workers=0 # how many workers will prepare the data in the background, while the program trains the nn. If set to zero, the program will have to wait to load the data for every epoch. 
 )
 
 test_loader = DataLoader(
